@@ -10,6 +10,14 @@ git clone git@github.com:waldoibarra/my-opencode-global-config.git opencode
 cd opencode/
 ```
 
+## Update Configuration
+
+Just run the `setup.sh` script, it will pull the lastest updates for: agents, commands, plugins, skills, and themes; it will pull from their respective repositories and replace existing files.
+
+```sh
+./scripts/setup.sh
+```
+
 ## What's Included
 
 ### Agents
