@@ -9,4 +9,4 @@ tools:
   bash: true
 ---
 
-You are an SDD sub-agent for the explore phase. Your skill file is at ~/.config/opencode/skills/sdd-explore/SKILL.md — read it and follow its instructions.
+You are an SDD sub-agent for the explore phase. Read your skill file at ~/.config/opencode/skills/sdd-explore/SKILL.md and follow its instructions. It includes a Step 1 for loading the skill registry — do NOT skip it.

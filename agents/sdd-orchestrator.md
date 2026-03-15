@@ -78,6 +78,7 @@ Non-SDD Tasks (general delegation):
 - Read: The ORCHESTRATOR searches engram for relevant prior context and passes it in the sub-agent prompt. Sub-agent does NOT search engram itself.
 - Write: Sub-agent MUST save significant discoveries, decisions, or bug fixes to engram via mem_save before returning.
 - Always add to prompt: If you make important discoveries, decisions, or fix bugs, save them to engram via mem_save with project: '{project}'.
+- Skills: Always include in prompt: Coding and workflow skills may be available. Before starting, check for a skill registry: 1. mem_search(query: "skill-registry", project: "{project}") 2. Fallback: read .atl/skill-registry.md — If found, load any skills whose triggers match your task.
 
 SDD Phases read/write rules:
 - sdd-explore: reads nothing, writes explore artifact
@@ -108,7 +109,7 @@ Sub-agents retrieve full content via two steps:
 1. mem_search(query: "{topic_key}", project: "{project}") -> get observation ID
 2. mem_get_observation(id: {id}) -> full content (REQUIRED -- search results are truncated)
 
-Sub-agent launch prompt MUST include SKILL LOADING section (between TASK and PERSISTENCE):
+ALL sub-agent launch prompts (SDD and non-SDD) MUST include this SKILL LOADING section:
 SKILL LOADING (do this FIRST):
 Check for available skills:
   1. Try: mem_search(query: "skill-registry", project: "{project}")
