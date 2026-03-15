@@ -1,14 +1,14 @@
 #!/bin/bash
 
-_source_lib_functions() {
-  local _script_dir
-  _script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+readonly SCRIPTS_DIR
 
-  source "$_script_dir/lib/constants.sh"
-  source "$_script_dir/lib/shell-helpers.sh"
-  source "$_script_dir/lib/git-updater.sh"
-  source "$_script_dir/lib/agents/superpowers.sh"
-  source "$_script_dir/lib/agents/agent-teams.sh"
+_source_lib_functions() {
+  source "$SCRIPTS_DIR/lib/constants.sh"
+  source "$SCRIPTS_DIR/lib/shell-helpers.sh"
+  source "$SCRIPTS_DIR/lib/git-updater.sh"
+  source "$SCRIPTS_DIR/lib/agents/agent-teams.sh"
+  source "$SCRIPTS_DIR/lib/agents/superpowers.sh"
 }
 
 _ensure_development_directory_exists() {
