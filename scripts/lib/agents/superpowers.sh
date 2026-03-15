@@ -1,12 +1,3 @@
-_install_or_update_superpowers_repo() {
-  if [ -d "$_repo_dir" ]; then
-    cd "$_repo_dir" || { echo "Failed to cd into $_repo_dir"; exit 1; }
-    git pull
-  else
-    git clone https://github.com/obra/$_repo_name.git "$_repo_dir"
-  fi
-}
-
 _ensure_global_plugins_and_skills_directories() {
   mkdir -p "$GLOBAL_CONFIG_DIR/plugins" "$GLOBAL_CONFIG_DIR/skills"
 }
@@ -23,14 +14,19 @@ _copy_updated_plugin_and_skills() {
 
 update_superpowers_agentic_skills_framework() {
   local -r _repo_name="superpowers"
+  local -r _repo_url="$GITHUB_URL/obra/$_repo_name.git"
   local -r _repo_dir="$AI_AGENTS_DIR/$_repo_name"
 
-  printf "\nUpdating the repo: %s" "$_repo_dir"
+  printf "\nUpdating the repo: %s\n" "$_repo_dir"
 
-  _install_or_update_superpowers_repo
+  if ! git_pull_or_clone_and_check_for_updates "$_repo_url" "$_repo_dir"; then
+    printf "⚠️ No new commits, skipping update.\n"
+    return
+  fi
+
   _ensure_global_plugins_and_skills_directories
   _remove_old_plugin_and_skills
   _copy_updated_plugin_and_skills
 
-  echo "Done updating $_repo_name."
+  echo "✅ Done updating $_repo_name."
 }

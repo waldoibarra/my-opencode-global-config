@@ -4,9 +4,11 @@ _source_lib_functions() {
   local _script_dir
   _script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-  source "$_script_dir/constants.sh"
-  source "$_script_dir/lib/superpowers.sh"
-  source "$_script_dir/lib/agent-teams-lite.sh"
+  source "$_script_dir/lib/constants.sh"
+  source "$_script_dir/lib/shell-helpers.sh"
+  source "$_script_dir/lib/git-updater.sh"
+  source "$_script_dir/lib/agents/superpowers.sh"
+  source "$_script_dir/lib/agents/agent-teams.sh"
 }
 
 _ensure_development_directory_exists() {
@@ -23,7 +25,7 @@ main() {
   _ensure_development_directory_exists
   _update_ai_agents
 
-  printf "\nDone updating. Restart OpenCode if it's open."
+  printf "\n✅ Done updating. Restart OpenCode if it's open.\n"
 }
 
 main
