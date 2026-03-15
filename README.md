@@ -2,46 +2,30 @@
 
 Backup of my OpenCode global configuration.
 
-## Setup
-
-```sh
-cd ~/.config/
-git clone git@github.com:waldoibarra/my-opencode-global-config.git opencode
-cd opencode/
-```
-
-## Update Configuration
-
-Just run the `setup.sh` script, it will pull the lastest updates for: agents, commands, plugins, skills, and themes; it will pull from their respective repositories and replace existing files.
-
-```sh
-./scripts/setup.sh
-```
-
 ## What's Included
 
-### Agents
+- [Agent Teams Lite](https://github.com/Gentleman-Programming/agent-teams-lite)
+- [Superpowers](https://github.com/obra/superpowers)
 
-- **gentleman** — Primary agent: Senior Architect mentor (helpful first, challenging when it counts)
-- **dangerous-gentleman** — Full permissions variant for unrestricted work
-- **sdd-\*** — SDD workflow subagents (init, explore, propose, spec, design, tasks, apply, verify, archive)
-- **sdd-orchestrator** — Coordinates SDD subagents
+## Setup
 
-### Skills
+```bash
+git clone git@github.com:waldoibarra/my-opencode-global-config.git ~/.config/opencode
+cd ~/.config/opencode
+```
 
-SDD phase implementations and skill registry:
+### Update Configuration
 
-- `sdd-init`, `sdd-explore`, `sdd-propose`, `sdd-spec`, `sdd-design`
-- `sdd-tasks`, `sdd-apply`, `sdd-verify`, `sdd-archive`
-- `skill-registry`
+Pull the lastest updates for agents, commands, plugins, skills, and themes.
 
-### MCP Servers
+```bash
+make update
+```
 
-- Context7 (code intelligence)
-- Engram (persistent memory)
-- Notion
-- Jira
+## Development
 
-## Origin
+When modifying the setup scripts, make sure to use ShellCheck to analyze for bugs.
 
-This setup is based on the [gentleman-programming](https://github.com/gentleman-programming) ecosystem, which provides the SDD (Spec-Driven Development) workflow and agent orchestration patterns. Engram is the persistence layer used for artifact storage.
+```bash
+make check
+```
