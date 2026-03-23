@@ -79,14 +79,10 @@ function buildFrontmatter(
   agent: AgentConfig,
   existingAgent: ExistingFrontmatter | null,
 ): Record<string, unknown> {
+  const { prompt, ...agentConfig } = agent;
   const frontmatter: Record<string, unknown> = {
-    description: agent.description,
-    mode: agent.mode,
+    ...agentConfig,
     model: existingAgent?.model || agent.model,
-    temperature: agent.temperature,
-    hidden: agent.hidden,
-    permission: agent.permission,
-    tools: agent.tools,
   };
 
   return frontmatter;

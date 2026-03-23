@@ -1,7 +1,7 @@
 ---
-description: Bootstrap SDD context and project configuration
 mode: subagent
 hidden: true
+description: Bootstrap SDD context and project configuration
 tools:
   read: true
   write: true

@@ -1,7 +1,7 @@
 ---
-description: Write detailed specifications from proposals
 mode: subagent
 hidden: true
+description: Write detailed specifications from proposals
 tools:
   read: true
   write: true

@@ -1,7 +1,7 @@
 ---
-description: Archive completed change artifacts
 mode: subagent
 hidden: true
+description: Archive completed change artifacts
 tools:
   read: true
   write: true

@@ -1,7 +1,7 @@
 ---
-description: Create technical design from proposals
 mode: subagent
 hidden: true
+description: Create technical design from proposals
 tools:
   read: true
   write: true

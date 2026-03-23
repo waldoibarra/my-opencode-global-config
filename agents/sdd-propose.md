@@ -1,7 +1,7 @@
 ---
-description: Create change proposals from explorations
 mode: subagent
 hidden: true
+description: Create change proposals from explorations
 tools:
   read: true
   write: true

@@ -1,7 +1,7 @@
 ---
-description: Validate implementation against specs
 mode: subagent
 hidden: true
+description: Validate implementation against specs
 tools:
   read: true
   write: true

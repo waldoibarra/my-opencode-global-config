@@ -1,7 +1,7 @@
 ---
-description: Break down specs and designs into implementation tasks
 mode: subagent
 hidden: true
+description: Break down specs and designs into implementation tasks
 tools:
   read: true
   write: true

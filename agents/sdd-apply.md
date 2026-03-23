@@ -1,7 +1,7 @@
 ---
-description: Implement code changes from task definitions
 mode: subagent
 hidden: true
+description: Implement code changes from task definitions
 tools:
   read: true
   write: true

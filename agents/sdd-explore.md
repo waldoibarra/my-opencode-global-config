@@ -1,7 +1,7 @@
 ---
-description: Investigate codebase and think through ideas
 mode: subagent
 hidden: true
+description: Investigate codebase and think through ideas
 tools:
   read: true
   write: true
