@@ -100,15 +100,19 @@ function writeMarkdownFile(
   });
 
   const quotedYamlContent = quoteYamlKeys(yamlContent);
-
-  const content = [
+  const contentParts = [
     FRONTMATTER_DELIMITER,
     quotedYamlContent.trim(),
     FRONTMATTER_DELIMITER,
     '',
     prompt || '',
-    '',
-  ].join('\n');
+  ];
+
+  if (!prompt.endsWith('\n')) {
+    contentParts.push('');
+  }
+
+  const content = contentParts.join('\n');
 
   fs.writeFileSync(markdownPath, content);
 }
@@ -120,7 +124,7 @@ function removeAgentFieldFromJson(openCodeJsonPath: string): void {
   if (parsed.agent) {
     delete parsed.agent;
     fs.writeFileSync(openCodeJsonPath, JSON.stringify(parsed, null, 2) + '\n');
-    console.log('✅ Removed "agent" field from opencode.json');
+    console.log('☑️ Removed "agent" field from opencode.json');
   }
 }
 
@@ -147,7 +151,7 @@ export function migrateAllAgents({
     const prompt = agent.prompt || '';
 
     writeMarkdownFile(markdownPath, frontmatter, prompt);
-    console.log(`✅ Migrated: ${agentName}.md`);
+    console.log(`☑️ Migrated: ${agentName}.md`);
   }
 
   removeAgentFieldFromJson(openCodeJsonPath);

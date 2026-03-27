@@ -7,7 +7,7 @@ _source_lib_functions() {
   source "$SCRIPTS_DIR/lib/constants.sh"
   source "$SCRIPTS_DIR/lib/shell-helpers.sh"
   source "$SCRIPTS_DIR/lib/git-updater.sh"
-  source "$SCRIPTS_DIR/lib/agents/agent-teams.sh"
+  source "$SCRIPTS_DIR/lib/agents/ai-gentle-stack.sh"
   source "$SCRIPTS_DIR/lib/agents/superpowers.sh"
 }
 
@@ -16,7 +16,7 @@ _ensure_development_directory_exists() {
 }
 
 _update_ai_agents() {
-  update_agents_team_sdd_orchestration
+  update_gentleman_ai_ecosystem
   update_superpowers_agentic_skills_framework
 }
 
@@ -25,7 +25,7 @@ main() {
   _ensure_development_directory_exists
   _update_ai_agents
 
-  printf "\n✅ Done updating. Restart OpenCode if it's open.\n"
+  echo "✅ Done updating. Restart OpenCode if it's open."
 }
 
 main

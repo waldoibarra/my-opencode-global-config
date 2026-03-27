@@ -17,10 +17,10 @@ update_superpowers_agentic_skills_framework() {
   local -r _repo_url="$GITHUB_URL/obra/$_repo_name.git"
   local -r _repo_dir="$AI_AGENTS_DIR/$_repo_name"
 
-  printf "\nUpdating the repo: %s\n" "$_repo_dir"
+  print_separator "Updating repo: $_repo_name"
 
   if ! git_pull_or_clone_and_check_for_updates "$_repo_url" "$_repo_dir"; then
-    printf "⚠️ No new commits, skipping update.\n"
+    print_separator "No new commits, skipping $_repo_name update"
     return
   fi
 
@@ -28,5 +28,5 @@ update_superpowers_agentic_skills_framework() {
   _remove_old_plugin_and_skills
   _copy_updated_plugin_and_skills
 
-  echo "✅ Done updating $_repo_name."
+  print_separator "Done updating repo: $_repo_name"
 }
