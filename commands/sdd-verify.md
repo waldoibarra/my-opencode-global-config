@@ -1,6 +1,6 @@
 ---
 description: Validate implementation matches specs, design, and tasks
-agent: sdd-verify
+agent: sdd-orchestrator
 subtask: true
 ---
 
