@@ -4,7 +4,7 @@ Backup of my OpenCode global configuration.
 
 ## What's Included
 
-- [Agent Teams Lite](https://github.com/Gentleman-Programming/agent-teams-lite)
+- [AI Gentle Stack](https://github.com/Gentleman-Programming/gentle-ai)
 - [Superpowers](https://github.com/obra/superpowers)
 
 ## Setup
