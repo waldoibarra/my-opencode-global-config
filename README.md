@@ -2,30 +2,10 @@
 
 Backup of my OpenCode global configuration.
 
-## What's Included
+## Archived Repo
 
-- [AI Gentle Stack](https://github.com/Gentleman-Programming/gentle-ai)
-- [Superpowers](https://github.com/obra/superpowers)
+> The tools I was using for this configuration rapidly evolved and it's now easier to install them.
+> So there is no need to track all of the config now.
 
-## Setup
-
-```bash
-git clone git@github.com:waldoibarra/my-opencode-global-config.git ~/.config/opencode
-cd ~/.config/opencode
-```
-
-### Update Configuration
-
-Pull the lastest updates for agents, commands, plugins, skills, and themes.
-
-```bash
-make update
-```
-
-## Development
-
-When modifying the setup scripts, make sure to use ShellCheck to analyze for bugs.
-
-```bash
-make check
-```
+**Migrated** to my [dotfiles](https://github.com/waldoibarra/dotfiles) repository.
+I still use the scripts in this repository to update my OpenCode configuration.
