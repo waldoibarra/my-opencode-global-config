@@ -20,7 +20,7 @@ update_superpowers_agentic_skills_framework() {
   print_separator "Updating repo: $_repo_name"
 
   if ! git_pull_or_clone_and_check_for_updates "$_repo_url" "$_repo_dir"; then
-    print_separator "No new commits, skipping $_repo_name update"
+    print_separator "No new commits, skipping update: $_repo_name"
     return
   fi
 

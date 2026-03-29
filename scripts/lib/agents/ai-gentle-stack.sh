@@ -1,5 +1,6 @@
 _check_for_new_versions_and_install() {
-  brew upgrade gentle-ai
+  gentle-ai update
+  gentle-ai upgrade
 }
 
 _refresh_managed_assets_to_current_version() {
