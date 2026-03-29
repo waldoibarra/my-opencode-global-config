@@ -8,7 +8,6 @@ _source_lib_functions() {
   source "$SCRIPTS_DIR/lib/shell-helpers.sh"
   source "$SCRIPTS_DIR/lib/git-updater.sh"
   source "$SCRIPTS_DIR/lib/agents/ai-gentle-stack.sh"
-  source "$SCRIPTS_DIR/lib/agents/superpowers.sh"
 }
 
 _ensure_development_directory_exists() {
@@ -17,7 +16,6 @@ _ensure_development_directory_exists() {
 
 _update_ai_agents() {
   update_gentleman_ai_ecosystem
-  update_superpowers_agentic_skills_framework
 }
 
 main() {
