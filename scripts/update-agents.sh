@@ -6,7 +6,6 @@ readonly SCRIPTS_DIR
 _source_lib_functions() {
   source "$SCRIPTS_DIR/lib/constants.sh"
   source "$SCRIPTS_DIR/lib/shell-helpers.sh"
-  source "$SCRIPTS_DIR/lib/git-updater.sh"
   source "$SCRIPTS_DIR/lib/agents/ai-gentle-stack.sh"
 }
 
